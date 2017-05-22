@@ -1,3 +1,3 @@
 # yes-no
 ## Description
-Ask and answer yes/no questions.
+Ask and vote on yes/no questions.

@@ -1,6 +1,6 @@
 {
   "name": "yes-no",
-  "description": "Ask and answer yes/no questions",
+  "description": "Ask and vote on yes/no questions",
   "version": "0.1.0",
   "author": "Jon Cass",
   "license": "MIT",
