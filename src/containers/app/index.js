@@ -1,14 +1,12 @@
 // React library
 import React from 'react';
-import { Link } from 'react-router-dom'
+
+// My library
+import NavBar from '../nav_bar'
 
 const App = ({ children }) => (
   <div>
-    <div>
-      <Link to="/">Home</Link>
-      ...
-      <Link to="/about-us">About</Link>
-    </div>
+    <NavBar />
 
     <main>
       {children}
