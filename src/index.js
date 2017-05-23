@@ -8,8 +8,10 @@ import { ConnectedRouter } from 'react-router-redux'
 // My library
 import store, { history } from './store'
 import App from './containers/app'
+import Ask from './containers/ask'
 import Home from './containers/home'
-import About from './containers/about'
+import Result from './containers/result'
+import Vote from './containers/vote'
 
 const target = document.querySelector('#root')
 
@@ -18,7 +20,9 @@ render(
     <ConnectedRouter history={history}>
       <App>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/ask" component={Ask} />
+        <Route exact path="/vote" component={Vote} />
+        <Route exact path="/result" component={Result} />
       </App>
     </ConnectedRouter>
   </Provider>,

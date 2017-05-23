@@ -10,9 +10,15 @@ const NavBar = () => (
     <Menu.Item as={Link} to='/'>
       Home
     </Menu.Item>
-      <Menu.Item as={Link} to='/about'>
-        About
-      </Menu.Item>
+    <Menu.Item as={Link} to='/ask'>
+      Ask
+    </Menu.Item>
+    <Menu.Item as={Link} to='/vote'>
+      Vote
+    </Menu.Item>
+    <Menu.Item as={Link} to='/result'>
+      Results
+    </Menu.Item>
   </Menu>
 )
 

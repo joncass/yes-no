@@ -4,9 +4,11 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 // Semantic library
-import { Button } from 'semantic-ui-react'
-import { Card } from 'semantic-ui-react'
-import { Header } from 'semantic-ui-react'
+import {
+  Button,
+  Card,
+  Header,
+} from 'semantic-ui-react'
 
 // My library
 import { increment, decrement, incrementAsync } from '../../modules/counter'
