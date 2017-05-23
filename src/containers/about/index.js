@@ -1,13 +1,18 @@
 // React library
 import React from 'react'
 
+// Semantic library
+import { Message } from 'semantic-ui-react'
+
 const About = () => (
-  <div>
-    <h1>About</h1>
+  <Message>
+    <Message.Header as='h1'>
+      About
+    </Message.Header>
     <p>
       This is the about page!
     </p>
-  </div>
+  </Message>
 )
 
 export default About

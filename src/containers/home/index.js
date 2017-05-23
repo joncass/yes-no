@@ -3,19 +3,55 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+// Semantic library
+import { Button } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
+
 // My library
 import { increment, decrement, incrementAsync } from '../../modules/counter'
 
 const Home = props => (
   <div>
-    <h1>Home</h1>
-    <p>Count: {props.count}</p>
+    <Header as='h1'>Home</Header>
+    <Card>
+      <Card.Content>
+        <Card.Header>
+          Count
+        </Card.Header>
+        <Card.Meta extra>
+          {props.count}
+        </Card.Meta>
+      </Card.Content>
+    </Card>
 
-    <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>Decrement</button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
-    </p>
+    <Button.Group>
+      <Button
+        positive
+        content='Increment'
+        icon='plus'
+        labelPosition='left'
+        onClick={props.increment}
+        disabled={props.isIncrementing}
+        loading={props.isIncrementing}
+      />
+      <Button
+        negative
+        content='Decrement'
+        icon='minus'
+        labelPosition='left'
+        onClick={props.decrement}
+      />
+        <Button
+          primary
+          content='Async'
+          icon='plus'
+          labelPosition='left'
+          onClick={props.incrementAsync}
+          disabled={props.isIncrementing}
+          loading={props.isIncrementing}
+        />
+    </Button.Group>
 
   </div>
 )
