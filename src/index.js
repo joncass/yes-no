@@ -18,7 +18,7 @@ render(
     <ConnectedRouter history={history}>
       <App>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about-us" component={About} />
+        <Route exact path="/about" component={About} />
       </App>
     </ConnectedRouter>
   </Provider>,
