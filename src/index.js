@@ -9,7 +9,6 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import App from './containers/app'
 import Ask from './containers/ask'
-import Home from './containers/home'
 import Result from './containers/result'
 import Vote from './containers/vote'
 
@@ -19,8 +18,7 @@ render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <App>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/ask" component={Ask} />
+        <Route exact path="/" component={Ask} />
         <Route exact path="/vote" component={Vote} />
         <Route exact path="/result" component={Result} />
       </App>

@@ -8,9 +8,6 @@ import { Menu } from 'semantic-ui-react'
 const NavBar = () => (
   <Menu>
     <Menu.Item as={Link} to='/'>
-      Home
-    </Menu.Item>
-    <Menu.Item as={Link} to='/ask'>
       Ask
     </Menu.Item>
     <Menu.Item as={Link} to='/vote'>
