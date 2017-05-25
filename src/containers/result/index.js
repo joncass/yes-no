@@ -11,33 +11,26 @@ import {
 
 const Result = props => (
   <Card.Group>
-    <Card centered>
-      <Card.Content>
-        <Statistic.Group>
-          <Statistic color='green' value='14' label='yes' />
-          <Statistic color='red' value='27' label='no' />
-        </Statistic.Group>
-      </Card.Content>
-      <Card.Content extra>
-        This is some question you asked. Above are the results?
-      </Card.Content>
-    </Card>
-    <Card centered>
-      <Card.Content>
-        <Statistic.Group>
-          <Statistic color='green' value='35' label='yes' />
-          <Statistic color='red' value='9' label='no' />
-        </Statistic.Group>
-      </Card.Content>
-      <Card.Content extra>
-        This is some OTHER question you asked. Above are the results?
-      </Card.Content>
-    </Card>
+    {
+      props.questions.map(question => (
+        <Card centered>
+          <Card.Content>
+            <Statistic.Group>
+              <Statistic color='green' value='14' label='yes' />
+              <Statistic color='red' value='27' label='no' />
+            </Statistic.Group>
+          </Card.Content>
+          <Card.Content extra>
+            {question.text}
+          </Card.Content>
+        </Card>
+      ))
+    }
   </Card.Group>
 )
 
 const mapStateToProps = state => ({
-
+  questions: state.question.questions,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({

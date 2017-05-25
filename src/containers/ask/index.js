@@ -10,26 +10,40 @@ import {
   TextArea,
 } from 'semantic-ui-react'
 
+// My library
+import {
+  addQuestion,
+  setNewQuestion,
+} from '../../modules/question'
+
 const Ask = props => (
   <Card centered>
     <Card.Content>
       <TextArea
         autoHeight
         placeholder='Ask your yes/no question'
+        value={props.text}
+        onChange={e => props.setNewQuestion(e.target.value)}
       />
     </Card.Content>
     <Card.Content extra>
-      <Button primary>Ask!</Button>
+      <Button
+        primary
+        onClick={() => props.addQuestion({ text: props.text })}
+      >
+        Ask!
+      </Button>
     </Card.Content>
   </Card>
 )
 
 const mapStateToProps = state => ({
-
+  text: state.question.newQuestionText,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-
+  addQuestion,
+  setNewQuestion,
 }, dispatch)
 
 export default connect(
