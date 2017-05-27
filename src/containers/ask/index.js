@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import {
   Button,
   Card,
-  TextArea,
+  Form,
 } from 'semantic-ui-react'
 
 // My library
@@ -19,12 +19,14 @@ import {
 const Ask = props => (
   <Card centered>
     <Card.Content>
-      <TextArea
-        autoHeight
-        placeholder='Ask your yes/no question'
-        value={props.text}
-        onChange={e => props.setNewQuestion(e.target.value)}
-      />
+      <Form>
+        <Form.TextArea
+          autoHeight
+          placeholder='Ask your yes/no question'
+          value={props.text}
+          onChange={e => props.setNewQuestion(e.target.value)}
+        />
+      </Form>
     </Card.Content>
     <Card.Content extra>
       <Button
